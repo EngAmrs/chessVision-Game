@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/Style.css">
+    <title>Chess game Vision</title>
+</head>
+<body>
+    <div class="row">
+        <section id="board" class="double-column">
+            <div class="play">
+                <h2></h2>
+                <img src="./Images/pngegg.png" alt="">
+            </div>
+            <table>
+                <tr>
+                    <td position="1-h">1</td>
+                    <td position="1-g"></td>
+                    <td position="1-f"></td>
+                    <td position="1-e"></td>
+                    <td position="1-d"></td>
+                    <td position="1-c"></td>
+                    <td position="1-b"></td>
+                    <td position="1-a"></td>
+                </tr>
+                
+                <tr>
+                    <td position="2-h">2</td>
+                    <td position="2-g"></td>
+                    <td position="2-f"></td>
+                    <td position="2-e"></td>
+                    <td position="2-d"></td>
+                    <td position="2-c"></td>
+                    <td position="2-b"></td>
+                    <td position="2-a"></td>
+                </tr>
+                <tr>
+                    <td position="3-h">3</td>
+                    <td position="3-g"></td>
+                    <td position="3-f"></td>
+                    <td position="3-e"></td>
+                    <td position="3-d"></td>
+                    <td position="3-c"></td>
+                    <td position="3-b"></td>
+                    <td position="3-a"></td>
+                </tr>
+                <tr>
+                    <td position="4-h">4</td>
+                    <td position="4-g"></td>
+                    <td position="4-f"></td>
+                    <td position="4-e"></td>
+                    <td position="4-d"></td>
+                    <td position="4-c"></td>
+                    <td position="4-b"></td>
+                    <td position="4-a"></td>
+                </tr>
+                <tr>
+                    <td position="5-h">5</td>
+                    <td position="5-g"></td>
+                    <td position="5-f"></td>
+                    <td position="5-e"></td>
+                    <td position="5-d"></td>
+                    <td position="5-c"></td>
+                    <td position="5-b"></td>
+                    <td position="5-a"></td>
+                </tr>
+                <tr>
+                    <td position="6-h">6</td>
+                    <td position="6-g"></td>
+                    <td position="6-f"></td>
+                    <td position="6-e"></td>
+                    <td position="6-d"></td>
+                    <td position="6-c"></td>
+                    <td position="6-b"></td>
+                    <td position="6-a"></td>
+                </tr>
+                <tr>
+                    <td position="7-h">7</td>
+                    <td position="7-g"></td>
+                    <td position="7-f"></td>
+                    <td position="7-e"></td>
+                    <td position="7-d"></td>
+                    <td position="7-c"></td>
+                    <td position="7-b"></td>
+                    <td position="7-a"></td>
+                </tr>
+                <tr>
+                    <td position="8-h"><span>8</span><span>h</span></td>
+                    <td position="8-g">g</td>
+                    <td position="8-f">f</td>
+                    <td position="8-e">e</td>
+                    <td position="8-d">d</td>
+                    <td position="8-c">c</td>
+                    <td position="8-b">b</td>
+                    <td position="8-a">a</td>
+                </tr>
+            </table>
+
+
+        </section>
+        <section id="info" class="column">
+            <div id="head"><h1>Chess Vision</h1></div>
+            <div id="score">
+                <div class="timer">
+                        0:30
+                </div>
+                <div>
+                    <img src="./Images/PikPng.com_pawn-stars-png_4216644.png" alt="">
+                    <span id="counter">0</span>
+                </div>
+            </div>
+            <div id="checks">
+                <span></span>
+                <span></span>
+            </div>
+            <div id="selections">
+                <div class="selection">
+                    <p>Training Mode</p>
+                    <select name="" id="Mode">
+                        <option value="Normal">Normal</option>
+                        <option value="Qhint">Qhint</option>
+                    </select>
+                </div>
+                <div class="selection">
+                    <p>Side</p>
+                    <select name="" id="color">
+                        <option value="white">White</option>
+                        <option value="black">Black</option>
+                    </select>
+                </div>
+                <!-- <div class="cords">
+                    <input type="checkbox" id="cords">
+                    <label for="cords">Show Coordinates</label>
+                </div> -->
+            </div>
+            <div id="start-button">    
+                <button>Start</button>
+                <button>Stop</button>
+            </div>
+
+        </section>
+    </div>
+    <audio id="myAudio">
+        <source src="./Sounds/Wrong sound effect.mp3" type="audio/mp3">
+    </audio>
+    <audio id="myAudio2">
+        <source src="./Sounds/Correct sound effect 正確音效.mp3" type="audio/mp3">
+    </audio>
+<script src="./Js/Js.js"></script>
+</body>
+</html>

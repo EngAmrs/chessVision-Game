@@ -1,0 +1,269 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color:rgba(0, 0, 0, .8);
+    height: 740px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    
+  }
+  .double-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 3;
+  }
+
+#info{
+    text-align: center;
+    background-color:rgba(0, 0, 0, .8);
+    border-radius: 1em;
+}
+
+#head{
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    background-color: #A9512F;
+    margin: 0;
+    padding: 0;
+}
+#head h1{
+    margin: 0;
+    padding: 5%;
+    color: #fff;
+}
+#score{
+
+    height: 10%;
+}
+#score div{
+    display: inline;
+}
+#score div:nth-child(2){
+    margin-top: 10%;
+    float: left;
+    width: 25%;
+
+}
+#score div:nth-child(1){
+    margin-top: 10%;
+    float: right;
+    width: 50%;
+
+}
+#score div:nth-child(2) img{
+    width: 30%;
+    margin-right: 10px;
+
+}
+#score div #counter, .timer{
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #fff;
+
+}
+
+#checks{
+    height: 70%;
+    margin-top: 4em;
+    
+}
+#checks span {
+    margin: 1em 0;
+    width: 100%;
+    float: left;
+    font-weight: bolder;
+    font-size: 1.1em;
+    color: green;
+    padding: 0 30px;
+}
+#checks span:nth-child(2){
+    color: red;
+}
+
+#selections{
+    background-color: rgba(169, 81, 47, 0.05);
+    height: 20%;
+
+}
+#selections .selection{
+    
+    display: inline-block;
+    
+}
+#selections .selection p{
+    
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #fff;
+    
+}
+#selections .selection select{
+
+    width: 70%;
+    height: 30px;
+    border-radius: 2em;
+    font-weight: bold;
+    outline: none;
+    text-align: center;
+}
+#selections .selection option{
+    font-weight: bold;
+}
+select.decorated option:hover {
+    background-color: red !important;
+}
+#selections .selection:nth-child(1){
+    
+    float: left;
+    width: 50%;
+    
+}
+#selections .selection:nth-child(2){
+    
+    float: right;
+    width: 50%;
+}
+#selections .cords label
+{
+    font-style: italic;
+    font-size: .9em;
+    color: #fff;
+}
+#selections .cords input{
+margin-top: 20px;
+}
+
+#start-button{
+    margin: 2em 0;
+    height: 30%;
+}
+#start-button button{
+    margin: 10px 0;
+    width: 70%;
+    height: 50px;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: #000;
+}
+#start-button button:nth-child(2){
+    display: none; 
+    background-color: #ccc;
+}
+
+#start-button button:hover{
+    background-color: rgba(97, 19, 29, .8);
+    color: #fff;
+
+}
+
+#board{
+    margin: 0 1em;
+   position: relative;
+}
+
+
+
+#board .play img, #board .play h2{
+    display: none;
+    position: absolute;
+    width: 30%;
+    top: 35%;
+    left: 35%;
+    z-index: 999;
+}
+#board .play h2{
+    font-size: 3em;
+    top: 35%;
+    left: 48%;
+    color: #fff;
+}
+
+#board table{
+    border: 2px solid #000;
+    border-radius: 10px;
+    border-spacing: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+#board table td{
+    position: relative;
+    background-color: #EBD0AB;
+    text-align:left;
+    margin: 0;
+    width: 8em;
+    vertical-align: top;
+    font-style: italic;
+    color:rgba(0, 0, 0, .5);
+    font-weight: bold;
+    font-size: .9em;
+    padding-right: .5em;
+    
+}
+#board table tr:nth-last-child(1) td{
+    text-align:right;
+    vertical-align: bottom;
+    position: relative;
+}
+
+#board table tr:nth-last-child(1) td span:nth-child(1){
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#board tr:nth-child(odd) td:nth-child(even) {background: #A9512F}
+#board tr:nth-child(even) td:nth-child(odd) {background: #A9512F}
+
+
+@media only screen and (max-width: 991px) {
+    .column {
+        flex:auto;
+        height: 100%;
+         width: 100%;
+      }
+    
+      .double-column {
+        flex:auto;
+        height: 50%;
+        width: 100%;
+      }
+
+    #info{
+        font-size: .7em !important;
+        height: 70%;
+        margin: 2em;
+    }
+    #board .play h2{
+        font-size: 2em;
+        display: block;
+        top: 30%;
+    }
+    #board table td{
+        font-size: .7em;
+    }
+
+
+}
